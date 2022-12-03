@@ -1,2 +1,3 @@
 - https://github.com/actions/setup-node
 - https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+- https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge
