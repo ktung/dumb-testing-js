@@ -43,9 +43,20 @@ function reduce(array, callback, initialValue) {
   return currentValue;
 }
 
+function some(array, callback) {
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i], i, array)) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 module.exports = {
   forEach,
   map,
   filter,
-  reduce
+  reduce,
+  some
 }
