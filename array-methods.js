@@ -77,6 +77,17 @@ function flat(array, depth = 1) {
   return newArray;
 }
 
+function find(array, callback) {
+  for (let i = 0; i < array.length; i++) {
+    const el = array[i];
+    if (callback(el, i, array)) {
+      return el;
+    }
+  }
+
+  return undefined;
+}
+
 module.exports = {
   forEach,
   map,
@@ -84,5 +95,6 @@ module.exports = {
   reduce,
   some,
   every,
-  flat
+  flat,
+  find
 }

@@ -6,7 +6,7 @@ const {
   some,
   every,
   flat,
-  // find,
+  find,
 } = require("./array-methods.js")
 
 // const forEach = (a, ...args) => a.forEach(...args)
@@ -16,7 +16,7 @@ const {
 // const some = (a, ...args) => a.some(...args)
 // const every = (a, ...args) => a.every(...args)
 // const flat = (a, ...args) => a.flat(...args)
-const find = (a, ...args) => a.find(...args)
+// const find = (a, ...args) => a.find(...args)
 
 it("forEach", () => {
   const func = jest.fn()
