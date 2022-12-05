@@ -25,8 +25,27 @@ function filter(array, callback) {
   return newArray;
 }
 
+function reduce(array, callback, initialValue) {
+  let currentValue = initialValue;
+
+  for (let i = 0; i < array.length; i++) {
+    const el = array[i];
+
+    // default initialValue is first element of the array
+    if (!currentValue) {
+      currentValue = el;
+      continue;
+    }
+
+    currentValue = callback(currentValue, el, i, array);
+  }
+
+  return currentValue;
+}
+
 module.exports = {
   forEach,
   map,
-  filter
+  filter,
+  reduce
 }
