@@ -13,7 +13,20 @@ function map(array, callback) {
   return newArray;
 }
 
+function filter(array, callback) {
+  const newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    const el = array[i];
+    if (callback(el, i, array)) {
+      newArray.push(el);
+    }
+  }
+
+  return newArray;
+}
+
 module.exports = {
   forEach,
-  map
+  map,
+  filter
 }
