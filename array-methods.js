@@ -63,11 +63,26 @@ function every(array, callback) {
   return true;
 }
 
+function flat(array, depth = 1) {
+  const newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    const el = array[i];
+    if (Array.isArray(el) && depth > 0) {
+      newArray.push(...flat(el, depth - 1));
+    } else {
+      newArray.push(el);
+    }
+  }
+
+  return newArray;
+}
+
 module.exports = {
   forEach,
   map,
   filter,
   reduce,
   some,
-  every
+  every,
+  flat
 }

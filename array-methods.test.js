@@ -5,7 +5,7 @@ const {
   reduce,
   some,
   every,
-  // flat,
+  flat,
   // find,
 } = require("./array-methods.js")
 
@@ -15,7 +15,7 @@ const {
 // const reduce = (a, ...args) => a.reduce(...args)
 // const some = (a, ...args) => a.some(...args)
 // const every = (a, ...args) => a.every(...args)
-const flat = (a, ...args) => a.flat(...args)
+// const flat = (a, ...args) => a.flat(...args)
 const find = (a, ...args) => a.find(...args)
 
 it("forEach", () => {
